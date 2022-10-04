@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const javascriptObject = [{
+            name: '윤인성', region: '서울'},
+            {name: '윤명월', region: '도쿄'}];
+
+
+        for (key in javascriptObject[0]) {
+        console.log(typeof javascriptObject[0][key]);
+        console.log(javascriptObject[0][key]);
+        }
+
+
+        const outputA = JSON.stringify(javascriptObject);
+        const outputB = JSON.stringify(javascriptObject, null, 2);
+
+        console.log(outputA);
+        console.log(outputB);
+
+        const outputC = JSON.parse(outputB)
+        console.log(outputC);
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- <div id="divbox" style="width:200px; background:yellowgreen;">
+</div>
+<div id="mouseXYText"></div>
+<br><br>
+<div id="inputbox" type="text" style="width:200px"/></div>
+
+<script>
+
+        window.onload = function(){
+            document.getElementById('divbox').addEventListener('click', function(event){
+                document.getElementById('mouseXYTEXT').innerHTML = 
+                'mouse >>>> ' +event.offsetX + '+' + event.offsetY;
+
+            });
+            document.getElementById('inputbox').addEventListener('keyup', function(event){
+                document.getElementById('mouseXYTeXT').innerHTML 
+            })
+        }
+</script> -->
+
+
+<div id="divbox" style="width:200px;height:200px; background: yellowgreen;">
+</div>
+<div id="mouseXYText"> </div>
+<br><br>
+<input id="inputbox" type="text" style="width:200px;"/>
+<div id="keyCodeText"> </div>
+<script>
+
+
+window.onload = function(){
+document.getElementById("divbox").addEventListener("click", function(event) {
+document.getElementById("mouseXYText").innerHTML =
+"mouse >>>> " + event.offsetX + " , " + event.offsetY ;
+});
+document.getElementById("inputbox").addEventListener("keyup", function(event) {
+document.getElementById("mouseXYText").innerHTML =
+"keyCode >>>> " + event.keyCode;
+});
+};
+</script>

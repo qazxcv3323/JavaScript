@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = [ 'kim', 'lee', 'park', 'song', 'hong']
+        let kor = [100, 60, 78, 33, 60];
+        let math = [60, 70, 79, 63, 61];
+        let eng = [60, 70, 70, 60, 60];
+
+        let arr = [];
+        let obj = {};
+
+        for (i=0;i<5;i++){
+            obj.name=name[i]
+            obj.kor=kor[i]
+            obj.math=math[i]
+            obj.eng=eng[i]
+            arr.push(obj)
+        }
+        // console.log(obj)
+        // console.log(arr)
+        // let arr = [];
+        // let obj = {};
+        // // let addr = {};
+
+        // let name = [ 'kim', 'lee', 'park'];
+        // let addr = ['seoul', 'busan', 'jeju']
+        // let addrnum = [10, 12, 22]
+        
+        // for (i=0;i<3;i++){
+        //     obj.name = name[i];
+        //     obj.addr = {};
+        //     obj.addr.city = addr[i]
+        //     obj.addr.addrnum = addrnum[i]
+        //     arr.push(obj);
+        // }
+        // console.log(obj);
+        // console.log(arr);
+
+        // {name : , kor:, math:, eng:}
+        // {name : , kor:, math:, eng:}
+        // {name : , kor:, math:, eng:}
+        // {name : , kor:, math:, eng:}
+        // {name : , kor:, math:, eng:}
+        
+
+
+        // let obj_2 ={};
+        // let result = [];
+
+        // let name_2 = [];
+        // let kor_2 = [];
+        // let math_2 = [];
+        // let eng_2 = [];
+
+
+        // for (i=0;i<5;i++){
+        //     name_2.push(arr[0]['name'])
+        //     kor_2.push(arr[0]['kor'])
+        //     math_2.push(arr[0]['math'])
+        //     eng_2.push(arr[0]['eng'])
+
+            // obj_2.name = arr[0]['name']
+            // obj_2.kor = arr[0]['kor']
+            // obj_2.math = arr[0]['math']
+            // obj_2.eng = arr[0]['eng']
+            // result.push(obj_2)
+        // }
+        // console.log(arr[0]['name'])
+        // console.log(name_2)
+        // console.log(kor_2)
+        // console.log(math_2)
+        // console.log(eng_2)
+
+        function callTenTimes(callback) {
+        for (let i = 0; i < 10; i++) {
+        // 매개 변수로 전달된 함수를 호출합니다.
+        callback();  
+        }
+        }
+        callTenTimes(function () { // 익명함수 정의
+        console.log('함수 호출');
+        });
+
+    </script>
+</body>
+</html>

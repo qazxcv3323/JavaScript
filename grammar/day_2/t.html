@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type = "button" id = "inputBtn" style = "width:100px" value = "입력"/>
+        <input type = "button" id = "printAllBtn" style = "width:100px" value = "전체출력"/>
+        <input type = "button" id = "scoreBtn" style = "width:100px" value = "성적집계"/>
+        <br/><br/>
+        <input type = "text" id = "searchText" style = "width:300px"/>
+        <input type = "button" id = "searchBtn" style = "width:100px" value = "검색"/>
+    </div>
+    <br/><br/>
+    <div id = "resultText"></div>
+    <script>
+
+    // 입력누르면 이름, 국어, 영어, 수학 성적입력 받음 
+    // 성적 처리 프로그램
+        // 1. 화면에서 '입력' 버튼을 누르면 이름, 국어, 영어, 수학 성적을 입력 받음.
+        // 2. 성적이 입력되면 총점과 평균이 자동으로 계산 됨.
+        // 3. 총점과 평균이 계산되면 석차도 계산 됨.
+        // 4. 화면에서 '전체 출력' 버튼을 누르면 입력된 모든 학생들이 성적이 출력 됨.
+        //    (브라우저 화면에 출력 - 콘솔 아님)
+        // 5. 화면에서 '성적 집계' 버튼을 누르면 전체 학생들의 총점에 대한 합계와 평균,
+        //    과목별 총점과 평균이 출력 됨.
+        // [옵션] 입력란과 검색 버튼을 두고 입력란에 학생 이름을 입력하고
+        //        검색을 누르면 해당 학생의 성적만 출력
+
+    
+    // let name = prompt("이름를 입력하시오", 0);
+    // let kor = prompt("국어점수를 입력하시오", 0);
+    // let mat = prompt("수학점수를 입력하시오", 0);
+    // let eng = prompt("영어점수를 입력하시오", 0);
+
+
+
+    let obj = {};
+    
+
+    // const total = (k, m, e)=>{return k+m+e}
+    // const avg = (t) => {return t/3}
+
+
+    window.onload = function(){
+    document.getElementById("inputBtn").addEventListener("click", function(event) {
+    let name = prompt("이름를 입력하시오", 0);
+    let kor = parseInt(prompt("국어점수를 입력하시오", 0));
+    let mat = parseInt(prompt("수학점수를 입력하시오", 0));
+    let eng = parseInt(prompt("영어점수를 입력하시오", 0));
+    
+    let score = [];
+    function scoreinput(){
+        console.log('입력하기');
+        let student = {};
+        student.name = prompt("이름를 입력하시오", '');
+        student.kor = parseInt(prompt("국어점수를 입력하시오", 0));
+        student.mat = parseInt(prompt("수학점수를 입력하시오", 0));
+        student.eng = parseInt(prompt("영어점수를 입력하시오", 0));
+
+        student.total = student.kor + student.mat +student.eng;
+        student.avg = student.total / 3;
+        score.push(student);
+    }
+
+    function viewScore(){
+        let allTotal = 0;
+        let allAvg = 0;
+        let tMath = 0;
+        let tEng = 0
+        let tKor = 0;
+        let aEng = 0;
+        let aKor = 0;
+        for (let sObj of score){
+            tMath += sObj.math;
+            tEng += sObj
+        }
+    }
+    sum = total(kor, mat, eng)
+    average = avg(sum)
+    
+    obj.name = name
+    obj.kor = kor
+    obj.mat = mat
+    obj.eng = eng
+
+    result_arr.push(obj.name)
+    result_arr.push(obj.kor)
+    result_arr.push(obj.mat)
+    result_arr.push(obj.eng)
+
+    });
+    };
+
+    document.getElementById("printAllBtn").addEventListener("click", function(event) {
+    
+    document.write(`${name}합계는 ${sum}이고, 평균은 ${average} 입니다 \n`)
+    
+    document.write(result_arr)
+    
+    });
+    // };
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+var url = 'http://dev2/soxcorp.co.kr:17104/mytest';
+var request = new XMLHttpRequest();
+
+request.open('GET', url, true); //비동기 호출
+request.send(null);
+
+request.onreadystatechange = function (){
+    if (request.readyState === 4 && request.status === 200){
+        result = request.responseText;
+        result = JSON.parse(result);
+        console.log(result);
+
+    }
+}
+
+// ex9.html
+
+</script> -->
+<script>
+    var url = "http://dev2.soxcorp.co.kr:17104/mytest";
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true); // 비동기 호출
+    request.send(null);
+    request.onreadystatechange = function () {
+    if (request.readyState === 4 && request.status === 200) {
+    result = request.responseText;
+    result = JSON.parse(result);
+    console.log(result);
+    }
+    };
+    </script>
+    
+</body>
+</html>
